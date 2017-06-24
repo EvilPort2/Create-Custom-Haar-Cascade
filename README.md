@@ -1,4 +1,4 @@
-# Create-Custom-Haar-Cascade
+# Create Custom Haar Cascade
 This script allows you to create custom haar cascades with ease.
 
 # Before using it
