@@ -1,3 +1,6 @@
+#Huge thanks to sentdex for the awesome tutorial on Youtube https://www.youtube.com/watch?v=jG3bu0tjFbk.
+#This tool is based on his tutorial.
+
 import os
 import cv2
 import urllib
@@ -75,10 +78,10 @@ def merge_info_lst():
 while True:
     os.system("clear")
     print "\t\tMain Menu"
-    print "\t\t---------"    
+    print "\t\t---------"
     print "\nOptions:-\n\n1. Download negative images from Image-net.org using URLs that contain their links\n2. Remove ugly images(in case you downloaded negative images from Image-net.org)\n3. Resize input images"
     print "4. Create positive images (samples) from negative and input images\n5. Start training Haar Cascades\n6. Cleanup all"
-    
+
     choice = int(raw_input("\n\nChoice: "))
 
     if choice == 1:
@@ -150,7 +153,7 @@ while True:
         print "Number of negative samples available " + str(len(os.listdir('negatives'))) + "\n"
 
         pos = raw_input("Enter number of positive samples you want to use for training: ")
-        neg = raw_input("Enter number of negative samples you want to use for training: ") 
+        neg = raw_input("Enter number of negative samples you want to use for training: ")
         num = raw_input("Enter number of stages: ")
         if not os.path.isdir("output_cascade"):
         	os.makedirs("output_cascade")
@@ -168,6 +171,6 @@ while True:
     		os.system("rm -rf input_images input_resized_images positives uglies bg.txt positives.vec")
     	elif c == "n" or c == "N":
     		continue
-    
+
     else:
     	print "Wrong choice..."
